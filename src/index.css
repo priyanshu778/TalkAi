@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+}
+
+.light-mode{
+    --color:black;
+    --background-color:white; 
+}
+
+.dark-mode{
+    --color:white;
+    --background-color:rgb(43, 43, 41);
+}
+
+@media (max-width:600px){
+    .sepration{
+        display: none;
+    }
+}

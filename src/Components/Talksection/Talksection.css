@@ -1,0 +1,146 @@
+.talksection{
+    background-color:var(--background-color);
+    height: 100vh;
+    flex: 1;
+}
+
+.top-section{
+    height: 75vh;
+    width: 100%;
+     
+}
+
+.heading{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    overflow: hidden;
+    font-size: 2vmax;
+    text-align: center;
+    padding: 2px;
+}
+
+.heading span:nth-child(1){
+    font-size: 4em;
+    font-weight: 700;
+    background:linear-gradient(to right, rgb(191, 60, 147),rgb(70, 129, 70),rgb(53, 53, 126));
+    background-clip: text;
+    color: transparent;
+}
+
+.heading span:nth-child(2){
+    font-size: 3em;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(60, 87, 87),rgb(80, 93, 34),rgb(31, 31, 130));
+    background-clip:text;
+    color: transparent;
+}
+
+.heading span:nth-child(3){
+    font-size: 1.5em;
+    font-weight: 400;
+    color: var(--color);
+    opacity: 0.5;
+}
+
+.buttom-section{
+    height: 25vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.buttom-section input{
+    height: 50px;
+    width: 50%;
+    border-radius: 25px;
+    outline: none;
+    font-size: 20px;
+    
+}
+
+.buttom-section button{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.buttom-section img{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.result{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 30px;
+    font-size: 20px;
+
+}
+
+.result img{
+    height: 40px;
+    width: 40px;
+    filter: drop-shadow(5px 5px 10px black);
+}
+
+.userbox{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    color: var(--color);
+}
+
+.aibox{
+    display: flex;
+    align-items: start;
+    gap: 20px;
+    color: var(--color);   
+}
+.aibox p{
+    width: 100%;
+    height: 450px;
+    overflow: auto;
+    scrollbar-width: none;
+}
+.load{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.load hr{
+    height: 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: aliceblue;
+    background: linear-gradient(to right,rgb(72, 72, 107),rgb(52, 130, 52),rgb(204, 110, 110));
+    background-size: 700px 10px;
+    animation: load 3s infinite;
+}
+
+@keyframes load{
+    0%{
+        background-position: -800px 0px;
+    }
+    100%{
+        background-position: 800px 0px;
+    }
+}
+
+@media (max-width:600px){
+    .heading{
+        font-size: 1.3vmax;
+    }
+}
