@@ -1,4 +1,8 @@
-const url = "AIzaSyDMLQoNIsbLt5J_2fltDtC-T_-kx9-bUwc";
+const url = process.env.REACT_APP_API_URL;
+
+if (!url) {
+  throw new Error("API key is missing. Please check your .env file.");
+}
 
 import {
   GoogleGenerativeAI,

@@ -30,6 +30,7 @@
     background:linear-gradient(to right, rgb(191, 60, 147),rgb(70, 129, 70),rgb(53, 53, 126));
     background-clip: text;
     color: transparent;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .heading span:nth-child(2){
@@ -38,6 +39,7 @@
     background: linear-gradient(to right, rgb(60, 87, 87),rgb(80, 93, 34),rgb(31, 31, 130));
     background-clip:text;
     color: transparent;
+    animation: slideIn 2s ease-in-out;
 }
 
 .heading span:nth-child(3){
@@ -45,6 +47,7 @@
     font-weight: 400;
     color: var(--color);
     opacity: 0.5;
+    animation: zoomIn 2s ease-in-out;
 }
 
 .buttom-section{
@@ -58,7 +61,7 @@
 
 .buttom-section input{
     height: 50px;
-    width: 50%;
+    width: 70%; /* Adjusted for smaller screens */
     border-radius: 25px;
     outline: none;
     font-size: 20px;
@@ -139,8 +142,93 @@
     }
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 @media (max-width:600px){
     .heading{
         font-size: 1.3vmax;
+    }
+}
+
+@media (max-width: 768px) {
+    .heading span:nth-child(1) {
+        font-size: 3em;
+    }
+
+    .heading span:nth-child(2) {
+        font-size: 2.5em;
+    }
+
+    .heading span:nth-child(3) {
+        font-size: 1.2em;
+    }
+
+    .buttom-section input {
+        width: 80%;
+    }
+
+    .buttom-section button {
+        height: 35px;
+        width: 35px;
+    }
+
+    .result {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .heading span:nth-child(1) {
+        font-size: 2.5em;
+    }
+
+    .heading span:nth-child(2) {
+        font-size: 2em;
+    }
+
+    .heading span:nth-child(3) {
+        font-size: 1em;
+    }
+
+    .buttom-section input {
+        width: 90%;
+    }
+
+    .buttom-section button {
+        height: 30px;
+        width: 30px;
+    }
+
+    .result {
+        font-size: 16px;
     }
 }

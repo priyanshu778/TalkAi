@@ -27,7 +27,7 @@ function Sidebar(){
             </div>
             {prevPrompt.map((item,index)=>{
                 return(
-                    <div className="history" onClick={()=>{
+                    <div className="history" key={index} onClick={()=>{
                         loadPrev(item)
                     }}>
                     <img src={history} alt=""  />

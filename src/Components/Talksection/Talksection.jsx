@@ -15,9 +15,9 @@ const Talksection = () => {
       <div className="top-section">
         {!showResult ? (
           <div className="heading">
-            <span>HELLO PRIYANSHU</span>
-            <span>I'm Your TalkAi</span>
-            <span>What can I help You ... ?</span>
+            <span className="fade-in">HELLO PRIYANSHU</span>
+            <span className="slide-in">I'm Your TalkAi</span>
+            <span className="zoom-in">What can I help You ... ?</span>
           </div>
         ) : (
           <div className="result">
