@@ -9,7 +9,6 @@ function App() {
     <div className="container">
       <Sidebar />
       <Sepration/>
-        
       <Talksection />
     </div>
   );

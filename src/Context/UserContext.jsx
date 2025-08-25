@@ -15,17 +15,30 @@ function UserContext({ children }) {
         setLoading(false)
     }
 
+    // async function sent(input) { 
+    //     setResultData("")
+    //     setShowResult(true)
+    //     setRecentPrompt(input)
+    //     setLoading(true)
+    //     setPrevPrompt(previos => [...previos, input])
+    //     let response = await run(input) // Uses updated API logic
+    //     setResultData(response.split("**") && response.split("*"))
+    //     setLoading(false)
+    //     setInput("")
+    // }
+
     async function sent(input) { 
-        setResultData("")
-        setShowResult(true)
-        setRecentPrompt(input)
-        setLoading(true)
-        setPrevPrompt(previos => [...previos, input])
-        let response = await run(input) // Uses updated API logic
-        setResultData(response.split("**") && response.split("*"))
-        setLoading(false)
-        setInput("")
-    }
+    setResultData("");
+    setShowResult(true);
+    setRecentPrompt(input);
+    setLoading(true);
+    setPrevPrompt(previos => [...previos, input]);
+    let response = await run(input); // API call
+    setResultData(response.trim());  // store the string response directly
+    setLoading(false);
+    setInput("");
+}
+
 
     const data = {
         input,
